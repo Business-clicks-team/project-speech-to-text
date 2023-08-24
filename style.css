@@ -54,6 +54,9 @@ main {
   box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
 /* 24,69,108
 
 
@@ -74,7 +77,13 @@ main {
   box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
   margin: auto auto;
   text-align: center;
-  animation: beam 0.8s infinite;
+  animation-duration: 0.3s;
+  /* animation: beam 0.8s infinite; */
+}
+
+.circle:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .circle i {
@@ -138,6 +147,12 @@ main {
   }
 }
 
+.hover:active {
+  transform: scale(1.05);
+}
+
+@media only screen and (min-width: 1024px) {
 .hover:hover {
   transform: scale(1.05);
+}
 }
