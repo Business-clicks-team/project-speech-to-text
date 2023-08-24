@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: rgb(5, 38, 66);
+  --color: rgb(89, 231, 238);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(33, 69, 91) 30%, rgba(49, 36, 56));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 400px;
+  height: 550px;
+  border: 1px solid rgb(5, 38, 66);
+  /* background: rgb(5, 38, 66); */
+  /* background: var(--background); */
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 69, 91) 10%,
+    rgba(49, 36, 56)
+  );
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 39%) 0px 26px 30px 10px,
+    rgb(0 0 0 / 30%) 0px 16px 10px -10px;
+  margin: auto 30px;
+  padding: 20px 2%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.profile i {
+  color: var(--color);
+  font-size: 25px;
+  padding: 5px;
+  background: rgb(5, 38, 66);
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+/* 24,69,108
+
+
+24, 146,255 */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.circle {
+  height: 190px;
+  width: 190px;
+  background: rgb(5, 38, 66);
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+  margin: auto auto;
+  text-align: center;
+  animation: beam 0.8s infinite;
+}
+
+.circle i {
+  font-size: 50px;
+  margin: 35% auto;
+  color: var(--color);
+}
+
+.footer {
+  margin-top: 90px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sound__activity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 69, 91) 10%,
+    rgba(49, 36, 56)
+  );
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+  border-radius: 20%;
+}
+
+.sound__activity i {
+  color: var(--color);
+  font-size: 25px;
+}
+
+.like i {
+  color: var(--color);
+  font-size: 25px;
+  padding: 5px;
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 69, 91) 10%,
+    rgba(49, 36, 56)
+  );
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+@keyframes beam {
+  0% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+}
+
+.hover:hover {
+  transform: scale(1.05);
+}
