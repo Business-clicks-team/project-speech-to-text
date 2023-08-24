@@ -77,11 +77,11 @@ main {
   box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
   margin: auto auto;
   text-align: center;
-  animation-duration: 0.3s;
+  transition-duration: 0.5s;
   /* animation: beam 0.8s infinite; */
 }
 
-.circle:hover {
+.circle:active {
   transform: scale(1.05);
   opacity: 0.8;
 }
@@ -153,6 +153,12 @@ main {
 
 @media only screen and (min-width: 1024px) {
 .hover:hover {
+  transition-duration: 0.3s;
   transform: scale(1.05);
+}
+
+.circle:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 }
