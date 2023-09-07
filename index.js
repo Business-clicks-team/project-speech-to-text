@@ -18,7 +18,6 @@ recognition.onresult = (event) => {
     output.textContent = result[0].toUpperCase() + result.slice(1);
   } else {
     output.textContent += ",  " + result;
-
     // features format text base on words used
     // words like 'new line' or 'fullstop' and 'comma'.
   }
@@ -48,12 +47,5 @@ startButton.addEventListener("click", () => {
     started = true
     startButton.ariaLabel = 'Listening to your message'
     startButton.classList.add('recording')
-  }
-});
-stopButton.addEventListener("click", () => {
-  try {
-    recognition.stop(); // Stop recognition if it's currently running
-  } catch (error) {
-    console.error("Speech recognition not supported in your browser.");
   }
 });
