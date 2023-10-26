@@ -9,14 +9,26 @@
 </head>
 <body>
     <main>
-        <div id="output" class="output">
+
+        <form id="send-mail-form">
+            <input type="email" name="mail receiver" id="receiver" required>
+        </form>
+       <div id="output" class="output">
        </div>
        
         <div class="input">
-            <button id="listen-btn" type="button" aria-label="Click to start speaking" focusable role="button">
+            <div class="flex">
+                <button class="listen-btn" id="listen-btn" type="button" aria-label="Click to start speaking" focusable role="button">
               </button>
-              <p id="text" aria-label="Click the button to start speaking">Click the button to start speaking</p>
 
+              
+                <button class="send-mail" form="send-mail-form" id="send-mail-btn">
+                Send Email
+              </button>
+            </a>
+            </div>
+            
+              <p id="text" aria-label="Click the button to start speaking">Click the button to start speaking</p>
         </div>
     </main>
 

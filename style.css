@@ -51,7 +51,7 @@ main{
   justify-content: center;
 }
 
-button{
+.listen-btn{
   border-style: outset;
   border-width: 3px;
   background-color: hsla(0, 100%, 50%, 1);
@@ -74,6 +74,19 @@ transform: scale(.9);
 p{
   font-size: 18px;
   font-weight: 500;
+}
+
+.flex{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#receiver{
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #b9afaf;
+  font-size: 14px;
 }
 
 

@@ -1,4 +1,6 @@
 const startButton = document.getElementById("listen-btn");
+const sendMailButton = document.getElementById("send-mail-btn");
+const form = document.forms[0];
 const indicatorText = document.getElementById("text");
 const output = document.getElementById("output");
 const recognition = new webkitSpeechRecognition(); // Create a SpeechRecognition instance
@@ -17,7 +19,8 @@ recognition.onresult = (event) => {
   if(output.innerText == ''){
     output.textContent = result[0].toUpperCase() + result.slice(1);
   } else {
-    output.textContent += ",  " + result;
+    output.textContent += "\n " + result;
+    // output.textContent += ", " + result;
     // features format text base on words used
     // words like 'new line' or 'fullstop' and 'comma'.
   }
@@ -49,3 +52,15 @@ startButton.addEventListener("click", () => {
     startButton.classList.add('recording')
   }
 });
+
+// mail sending button
+form.addEventListener("submit", (e) => {
+e.preventDefault()
+})
+
+sendMailButton.addEventListener('click', () => {
+console.log(form.elements['mail receiver'].value)
+  // location.href=`mailto:${form.elements['mail receiver'].value}`
+  location.href='mailto:funshoajayi29@gmail.com'
+})
+
