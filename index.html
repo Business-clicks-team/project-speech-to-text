@@ -8,11 +8,29 @@
     <script src="./index.js" defer></script>
 </head>
 <body>
-    <main>
 
-        <form id="send-mail-form">
-            <input type="email" name="mail receiver" id="receiver" required>
-        </form>
+  <div  id="modal" class="modal-container flex">
+    <div class="modal-body">
+      <form id="send-mail-form">
+        <h1>Welcome to Speech Mailer!</h1>
+        <div>
+        <label for="mail receiver">Enter the receiver's mail</label>
+      <input type="email" name="mail receiver" id="receiver" required>
+        </div>
+
+        <div>
+        <label for="mail receiver">Enter the subject topic of your mail</label>
+      <input type="text" name="mail subject" id="subject" required>
+        </div>
+
+        <div>
+          <button form="send-mail-form" type="submit">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <main>
        <div id="output" class="output">
        </div>
        
@@ -22,7 +40,7 @@
               </button>
 
               
-                <button class="send-mail" form="send-mail-form" id="send-mail-btn">
+                <button class="send-mail" id="send-mail-btn">
                 Send Email
               </button>
             </a>

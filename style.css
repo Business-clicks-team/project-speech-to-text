@@ -82,14 +82,73 @@ p{
   align-items: center;
 }
 
-#receiver{
-  padding: 10px;
+.send-mail{
+  font-size: 16px;
+  padding: 10px 20px;
+  border:1px solid;
   border-radius: 6px;
-  border: 1px solid #b9afaf;
-  font-size: 14px;
+}
+
+.modal-container{
+  background: #00000096;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.modal-body{
+  background-color: white;
+  padding: 20px;
+}
+
+.modal-body > form{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  align-items: center;
+
+}
+
+.modal-body > form > h1{
+  text-align: center;
+}
+
+.modal-body > form > div{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  width: 100%;
 }
 
 
+.modal-body > form > div > button{
+  font-size: 16px;
+  padding: 10px 20px;
+  border:1px solid;
+  border-radius: 6px;
+}
+
+.modal-body > form > div > input{
+width: 100%;
+padding: 10px;
+border-radius: 6px;
+border: 1px solid #b9afaf;
+font-size: 14px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .modal-body{
+    border-radius: 8px;
+  }
+}
 
 @media only screen and (min-width: 1024px) {
 .hover:hover {
